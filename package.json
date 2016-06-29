@@ -2,10 +2,10 @@
   "name": "node-server",
   "version": "0.0.1",
   "main": "app.js",
-
   "dependencies": {
-    "express": "latest",
+    "async": "^2.0.0-rc.6",
     "body-parser": "~1.0.1",
+    "express": "latest",
     "redis": "~2.3.0"
   }
 }

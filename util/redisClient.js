@@ -60,6 +60,18 @@ exports.removeItem = function (key, callback) {
     });
 };
 
+/*
+* 自增长key生成
+* */
+exports.incrItem = function (key, callback) {
+    client.incr(key, function (err, reply) {
+        if (err) {
+            callback(err);
+        }
+        return callback(null, reply);
+    });
+}
+
 /**
  * 获取默认过期时间，单位秒
  */

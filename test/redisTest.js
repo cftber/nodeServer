@@ -14,6 +14,10 @@ client.on("error", function (err) {
     console.log("error" + err);
 });
 
+//client.mset("incr1", 100, "incrother", 1, redis.print);
+client.incr('incr1', redis.print);
+return;
+
 client.set("clienttest", "testval", redis.print);
 // client.hset("hashkey", "hashkeysub", "hash value", function (err, reply) {
 //     if (err) {
